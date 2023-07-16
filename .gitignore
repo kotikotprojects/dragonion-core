@@ -1,0 +1,9 @@
+/.idea/
+/venv/
+/tests/
+/build/
+/dist/
+/data/
+__pycache__
+
+poetry.lock
