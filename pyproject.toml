@@ -10,6 +10,8 @@ packages = [{include = "dragonion_core"}]
 python = "^3.10"
 dataclasses-json = "^0.5.9"
 sqlitedict = "^2.1.0"
+cryptography = "^41.0.2"
+attrs = "^23.1.0"
 
 
 [build-system]
