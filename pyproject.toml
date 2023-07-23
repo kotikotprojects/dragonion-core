@@ -7,8 +7,8 @@ readme = "README.md"
 packages = [{include = "dragonion_core"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-dataclasses-json = "^0.5.9"
+python = ">=3.7,<3.12"
+dataclasses-json = "^0.5.13"
 sqlitedict = "^2.1.0"
 cryptography = "^41.0.2"
 attrs = "^23.1.0"
