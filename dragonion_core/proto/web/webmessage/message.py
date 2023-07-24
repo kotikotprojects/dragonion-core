@@ -19,6 +19,7 @@ class WebMessageMessage:
     :param message: Encrypted b64-encoded message
     """
     username: str
+    avatar: str
     message: bytes
     type: Final = "message"
 
@@ -47,6 +48,7 @@ class WebBroadcastableBuilder:
     :param keys: Dict with public keys in format username:public_key
     """
     from_user: str
+    avatar: str
     message_content: str
     keys: dict[str, bytes]
 
@@ -60,6 +62,7 @@ class WebBroadcastableBuilder:
 
             self.broadcastable.messages[username] = WebMessageMessage(
                 username=self.from_user,
+                avatar=self.avatar,
                 message=base64.urlsafe_b64encode(public_key.encrypt(
                     self.message_content.encode(),
                     padding=padding.OAEP(

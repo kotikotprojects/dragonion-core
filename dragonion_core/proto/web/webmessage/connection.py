@@ -14,6 +14,7 @@ class WebConnectionMessage:
     """
     username: str
     public_key: bytes
+    password: str
     type: Final = "connect"
 
 
