@@ -46,6 +46,8 @@ webmessage_type_literal = Literal[
 class _WebAnyMessage:
     username: str | None = None
     type: webmessage_type_literal = "message"
+    password: str | None = None
+    avatar: str | None = None
     message: str | None = None
     messages: dict[str, WebMessageMessage] = None
     error_message: webmessage_error_message_literal | None = None
