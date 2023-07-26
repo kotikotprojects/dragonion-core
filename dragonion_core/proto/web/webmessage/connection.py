@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 
+from datetime import datetime
+
 from typing import Final
 
 
@@ -16,6 +18,7 @@ class WebConnectionMessage:
     public_key: bytes
     password: str
     type: Final = "connect"
+    time: datetime = None
 
 
 @dataclass_json
@@ -27,6 +30,7 @@ class WebConnectionResultMessage:
     """
     connected_users: dict[str, bytes] = None
     type: Final = "connect_answer"
+    time: datetime = None
 
 
 @dataclass_json
@@ -38,3 +42,4 @@ class WebDisconnectMessage:
     """
     username: str
     type: Final = "disconnect"
+    time: datetime = None

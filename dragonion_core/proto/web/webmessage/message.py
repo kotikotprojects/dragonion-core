@@ -2,6 +2,8 @@ from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
 from typing import Final
 
+from datetime import datetime
+
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives import hashes
@@ -22,6 +24,7 @@ class WebMessageMessage:
     avatar: str
     message: bytes
     type: Final = "message"
+    time: datetime = None
 
     def decrypt(self, identity: Identity):
         return identity.decrypt(self.message)
@@ -37,6 +40,7 @@ class WebBroadcastableMessage:
 
     messages: dict[str, WebMessageMessage] = field(default_factory=dict)
     type: Final = "broadcastable"
+    time: datetime = None
 
 
 @dataclass

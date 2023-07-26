@@ -1,6 +1,7 @@
 from typing import Literal, Union
 from dataclasses_json import dataclass_json
 from dataclasses import dataclass
+from datetime import datetime
 
 from .server import (
     webmessage_error_message_literal,
@@ -51,6 +52,7 @@ class _WebAnyMessage:
     message: str | None = None
     messages: dict[str, WebMessageMessage] = None
     error_message: webmessage_error_message_literal | None = None
+    time: datetime = None
 
 
 webmessages_union = Union[

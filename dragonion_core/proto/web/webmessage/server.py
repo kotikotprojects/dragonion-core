@@ -2,6 +2,8 @@ from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 from typing import Final, Literal
 
+from datetime import datetime
+
 
 webmessage_error_message_literal = Literal[
     "unknown", "username_exists", "invalid_webmessage"
@@ -17,6 +19,7 @@ class WebErrorMessage:
     """
     error_message: webmessage_error_message_literal
     type: Final = "error"
+    time: datetime = None
 
 
 @dataclass_json
@@ -28,3 +31,4 @@ class WebNotificationMessage:
     """
     message: str
     type: Final = "notification"
+    time: datetime = None
