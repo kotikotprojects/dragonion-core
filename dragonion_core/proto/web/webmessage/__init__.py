@@ -1,7 +1,8 @@
 from .webmessage import (
     webmessage_type_literal,
     webmessages_union,
-    WebMessage
+    WebMessage,
+    set_time
 )
 from .server import (
     webmessage_error_message_literal,
@@ -23,6 +24,7 @@ __all__ = [
     'webmessage_type_literal',
     'webmessages_union',
     'WebMessage',
+    'set_time',
 
     'WebMessageMessage',
     'WebBroadcastableMessage',

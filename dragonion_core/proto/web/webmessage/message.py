@@ -29,10 +29,6 @@ class WebMessageMessage:
     def decrypt(self, identity: Identity):
         return identity.decrypt(self.message)
 
-    def set_time(self):
-        self.time = datetime.now()
-        return self
-
 
 @dataclass_json
 @dataclass

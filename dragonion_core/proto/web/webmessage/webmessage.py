@@ -22,6 +22,7 @@ __all__ = [
     'webmessage_type_literal',
     'webmessages_union',
     'WebMessage',
+    'set_time',
 
     'WebMessageMessage',
     'WebBroadcastableMessage',
@@ -87,3 +88,8 @@ class WebMessage:
             "connect_answer": WebConnectionResultMessage.from_json,
             "broadcastable": WebBroadcastableMessage.from_json
         }[_WebAnyMessage.from_json(data).type](data)
+
+
+def set_time(webmessage: webmessages_union):
+    webmessage.time = datetime.now()
+    return webmessage
