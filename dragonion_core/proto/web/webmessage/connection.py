@@ -18,7 +18,7 @@ class WebConnectionMessage:
     public_key: bytes
     password: str
     type: Final = "connect"
-    time: datetime = None
+    time: datetime | None = None
 
 
 @dataclass_json
