@@ -56,7 +56,9 @@ class WebBroadcastableBuilder:
     message_content: str
     keys: dict[str, bytes]
 
-    broadcastable: WebBroadcastableMessage = WebBroadcastableMessage()
+    broadcastable: WebBroadcastableMessage = field(
+        default_factory=WebBroadcastableMessage
+    )
 
     def __post_init__(self):
         for username in self.keys.keys():
