@@ -53,7 +53,7 @@ class _WebAnyMessage:
     message: str | None = None
     messages: dict[str, WebMessageMessage] = None
     error_message: webmessage_error_message_literal | None = None
-    time: datetime = None
+    time: datetime | None = None
 
 
 webmessages_union = Union[

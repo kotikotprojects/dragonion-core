@@ -40,7 +40,7 @@ class WebBroadcastableMessage:
 
     messages: dict[str, WebMessageMessage] = field(default_factory=dict)
     type: Final = "broadcastable"
-    time: datetime = None
+    time: datetime | None = None
 
 
 @dataclass
