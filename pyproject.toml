@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dragonion-core"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["BarsTiger <zxcbarstiger@gmail.com>"]
 readme = "README.md"
@@ -10,7 +10,7 @@ packages = [{include = "dragonion_core"}]
 python = ">=3.7,<3.12"
 dataclasses-json = "^0.5.13"
 sqlitedict = "^2.1.0"
-cryptography = "^41.0.2"
+cryptography = "^42.0.7"
 attrs = "^23.1.0"
 
 
